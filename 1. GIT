@@ -1,45 +1,66 @@
 GIT: GLOBAL INFORMATION TRACKER.
 
 VCS: VERSION CONTROL SYSTEM
-it will keep the code separately for each version.
 
-v-1	: 100 lines --- > store (repo-1)
-v-2	: 200 lines --- > store (repo-2)
-v-3	: 300 lines --- > store (repo-3)
+It will keep the code separately for each version.
 
-REPO: It is a folder where we store our code.
-index.html: it is a basic file for every application
+V-1	: 100 lines --- > store (repo-1)
+V-2	: 200 lines --- > store (repo-2)
+V-3	: 300 lines --- > store (repo-3)
 
-v1 --- > index.html
-v2 --- > index.html
-v3 --- > index.html 
+REPO: A repository is a storage for your project files and the complete history of changes.
 
+index.html: It is a basic file for every application
+
+V1 --- > index.html
+V2 --- > index.html
+V3 --- > index.html 
 
 INTRO:
+
 Git is used to track the files.
 It will maintain multiple versions of the same file.
 It is platform-independent.
 It is free and open-source.
 They can handle larger projects efficiently.
-It is 3rd generation of vcs.
-it is written on c programming
-it came on the year 2005
+It is 3rd generation of VCS.
+It is written on c programming
+It came in the year 2005
 
 
 CVCS: CENTRALIZED VERSION CONTROL SYSTEM
-EX: SVN: it can store code on a single repo.
+EX: SVN: It can store code on a single repo.
 
 DVCS: DISTRIBUTED VERSION CONTROL SYSTEM
-EX: GIT: it can store code on Multiple repo.
-
+EX: GIT: It can store code on Multiple repos.
 
 ROLLBACK: Going back to the previous version of the application.
 
-
 STAGES:
-WORKING DIRECTORY: where we write our source code.
-STAGING AREA: we track files here.
-REPOSITORY: where we store tracked source code
+
+Git has 3 main stages where your files move during development:
+
+1️⃣ Working Directory (Untracked/Modified)
+
+Where you create or modify files.
+Git doesn’t track changes yet.
+Check status with: git status
+
+2️⃣ Staging Area (Ready to Commit)
+
+When you decide to save changes, you add them to the staging area.
+This tells Git which files to include in the next commit.
+Add files with: git add filename  
+
+3️⃣ Committed (Saved to Local Repository)
+
+The changes are saved permanently in Git history.
+Each commit has a unique ID to track changes.
+Save changes with: git commit -m "Description of the changes"
+
+WORKING DIRECTORY: Where we write our source code.
+STAGING AREA: We track files here.
+REPOSITORY: Where we store tracked source code
 
 
 WORKING WITH GIT:
@@ -51,43 +72,39 @@ yum install git -y  [yum=pkg manager, install=action, git=pkg name -y=yes]
 git -v	: to check version
 git init : to install .git (local repo)
 
+To create file	   : vim index.html (content is opt)
+To check status	  : git status
+To track file	    : git add index.html
+To check status  	: git status
+To store file	    : git commit -m "commit-1" index.html
 
-To create file	: vim index.html (content is opt)
-to check status	: git status
-to track file	: git add index.html
-to check status	: git status
-to store file	: git commit -m "commit-1" index.html
+Create a file -- > add -- > commit 
 
-create a file -- > add -- > commit 
-
-to show commits	: git log
-to show	last 2 commits: git log -2
-to show commits in single line: git log -2 --oneline
-
+To show commits	                : git log
+To show	last 2 commits          : git log -2
+To show commits in single line  : git log -2 --oneline
 
 =================================================
 
 CONFIGURING USER AND EMAIL:
 
-git config user.name "raham"
-git config user.email "raham@gmail.com"
+git config user.name "srikanth"
+git config user.email "srikanth@outlook.com"
+
+NOTE: This user and email will be replicated to new commits only.
 
 
-NOTE: this user and email will be replicated to new commits only.
-
-
-Git show: used to show the files which are attached to commits.
+git show: used to show the files which are attached to commits.
 git log --online
 git show commit_id
 
 
 BRANCHES:
-It is a individaual line of developemt.
-developers write the code on branches.
-initally baraches we create on git.
-after write source code on git we push to github.
-Default barnch is Master.
-Note: when we do a iniatl commit the only default branch will be created.
+
+✅ A branch is like a separate copy of your project where you can make changes without affecting the main code.
+✅ It helps in working on new features, fixing bugs, and collaborating with teams safely.
+✅ Once your changes are ready, you can merge the branch back into the main project.
+
 
 Dev -- > Git (Movies branch) -- > code -- > github
 
